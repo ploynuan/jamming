@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:wght@300&display=swap');
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #000000;
+    height: 100vh;
+ }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+}
+.circle {
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+	background-color: #10196e;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	filter: blur(250px);
+}
+.circle2{
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+	background-color: #10196e;
+	position: absolute;
+    right: 0px;
+    bottom: 0px;
+	filter: blur(250px);
+}
+.box{
+    position: absolute;
+    height: 350px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+}
+.bluebox{
+    width: 350px;
+    height: 350px;
+    background-color: #10196e;
+    border-radius: 15px; 
+}
+.logo{
+    margin: auto;
+    width: 100%; 
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bluebox .logo img {
+    width: auto;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.bluebox .logo h1{
+    font-size: 18px; 
+    color: white; 
+    font-weight: 600;
+}
+.whitebox{
+    width: 350px;
+    height: 400px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whitebox .login{
+    margin: 0 auto;
+    width: 100%; 
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whitebox .login h1{
+    display: none;
+}
+.whitebox .login img{
+    display: none;
+}
+.login-form{
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    height: 40px;
+    width: 280px;
+    background-color: rgb(252, 252, 252);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+.login-form span::before{
+    content: attr(data-placeholde);
+    position: absolute;
+    top: 0%;
+    left: 44%;
+    color: #c4c3c3;
+    transition: .5s;
+    opacity: 1;
+}
+#logo-input{
+    margin: 8px 20px;
+    font-size: 23px;
+    color: #000000;
+    padding-right: 15px;
+    border-right: 2px solid #53636e;
+}
+.input{
+    height: 30px;
+    width: 50%;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    background:transparent;
+    z-index: index 1;
+    color: rgb(0, 0, 0);
+}
+.error{
+    text-align: center;
+    color: red;
+    font-size: 12px;
+}
+.btn-submit{
+    margin-bottom: 7px;
+    width: 280px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:#10196e;
+    color: #fff;
+    background-size: 200%;
+    font-size: 15px;
+    cursor: pointer;
+}
+@media (max-width:900px){
+    .box{
+        position: absolute;
+        width: 80%;
+    }
+    .bluebox{
+        width: 50%;
+    }
+    .bluebox .logo h1{
+        font-size: clamp(14px,2vw,18px); 
+    }
+    .whitebox{
+        width: 50%;
+    }
+    .whitebox .login{
+        width: 80%;
+    }
+    .login-form{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        max-width: 250px;
+        width: 100%;
+        height: 35px;
+    }
+    #logo-input{
+        padding-right: 10px;
+        font-size: clamp(16px,5vw,18px); 
+    }
+    .input{
+        font-size: clamp(12px,5vw,15px); 
+    }
+    .btn-submit{
+        height: 35px;
+        max-width: 250px;
+        width: 100%;    
+        font-size: clamp(12px,5vw,15px); 
+    }
+}
+@media (max-height:540px){
+    .circle {
+        width: 400px;
+        height: 200px;
+        border-bottom-left-radius: 400px;
+        border-bottom-right-radius: 400px;
+    }
+    .circle2{
+        width: 400px;
+        height: 200px;
+        border-top-left-radius: 400px;
+        border-top-right-radius: 400px;
+    }
+    .box{
+        height: 70vh;
+    }
+    .bluebox{
+        height: 70vh;
+    }
+    .bluebox .logo h1{
+        font-size: clamp(14px,4vh,18px); 
+    }
+    .whitebox{
+        height: 70vh;
+    }
+    #logo-input{
+        font-size: clamp(16px,5vh,18px); 
+    }
+    .input{
+        font-size: clamp(12px,5vh,15px); 
+    }
+    .btn-submit{
+        font-size: clamp(12px,5vh,15px); 
+    }
+}
+@media (max-width:540px){
+    .circle {
+        width: 280px;
+        height: 140px;
+        border-bottom-left-radius: 280px;
+        border-bottom-right-radius: 280px;
+        filter: blur(120px);
+    }
+    .circle2{
+        width: 280px;
+        height: 140px;
+        border-top-left-radius: 280px;
+        border-top-right-radius: 280px;
+        filter: blur(120px);
+    }
+    .box{
+        height: 400px;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .whitebox{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .bluebox{
+        height: 0px;
+    }
+    .bluebox .logo h1{
+        display: none;
+    }
+    .bluebox .logo img {
+       display: none;
+    }
+    .whitebox .login{
+        height: 100%;
+        flex-direction: column;
+    }
+    .whitebox .login img{
+        display: block;
+        width: 160px;
+        height: auto;
+    }
+    .whitebox .login h1{
+        width: 65vw;
+        display: block;
+        color: rgb(0, 0, 0); 
+        font-weight: 600;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        font-size: clamp(14px,4vw,18px); 
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .login-form{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        max-width: 250px;
+        width: 65vw;
+        height: 35px;
+    }
+    #logo-input{
+        padding-right: 10px;
+        font-size: clamp(16px,5vw,18px); 
+    }
+    .input{
+        font-size: clamp(12px,5vw,15px); 
+    }
+    .btn-submit{
+        height: 35px;
+        max-width: 250px;
+        width: 65vw;
+        font-size: clamp(12px,5vw,15px); 
+    }
+}
